@@ -1,0 +1,25 @@
+<%= render :partial => 'layouts/header'%>
+<div class='container'>
+  <table class='table table-bordered'>
+    <thead>
+      <tr>
+        <td> Cab no </td>
+        <td> Latitude </td>
+        <td> Longitude </td>
+        <td> Availablity </td>
+        <td> Color </td>
+      </tr>
+    </thead>
+    <tbody>
+    <% @available_cabs.each do |cab| %>
+      <tr>
+        <td> <%= cab.id%> </td>
+        <td> <%= cab.latitude%> </td>
+        <td> <%= cab.longitude%> </td>
+        <td> <%= cab.availability ? 'Yes' : 'No' %> </td>
+        <td> <%= cab.color.capitalize %>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

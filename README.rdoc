@@ -1,0 +1,56 @@
+== Fuber
+
+Built using
+  - Ruby ~> 2.3.0
+  - Rails ~> 4.2.4
+
+Setup
+  
+  1) Install required gems using the below command 
+      bundle install
+
+  2) Create database.yml file 
+      copy to database.yml.example into database.yml
+
+  3) Setup the database using the below command
+      rake db:create db:migrate
+
+  4) Load the seed data ( Seed contains a random 5 cabs with latitude and longitude set )
+      rake db:seed
+
+
+Running test cases
+
+  1) Run the specs using the below command
+      rspec
+
+Available api's
+  
+  1) Creating cabs:
+
+      post -> /cabs
+
+      params = {
+        latitude: 12.43243242,
+        longitude: 76.3242432,
+        color: 'pink'
+      }
+
+  2) Starting a ride:
+
+      post -> /start_ride
+
+      params = {
+        starting_latitude: 12.43243242,
+        starting_longitude: 76.3242432,
+        color: 'pink'
+      }
+
+  3) Ending a ride:
+
+      put -> /stop_ride/:id
+
+      params = {
+        ending_latitude: 12.43243242,
+        ending_longitude: 76.3242432
+      }
