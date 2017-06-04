@@ -10,7 +10,7 @@ Setup
       bundle install
 
   2) Create database.yml file 
-      copy to database.yml.example into database.yml
+      copy database.yml.example into database.yml
 
   3) Setup the database using the below command
       rake db:create db:migrate
