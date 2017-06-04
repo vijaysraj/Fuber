@@ -1,0 +1,22 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  reconnect: false
+  database: fuber_development
+  pool: 5
+  username: postgres
+  password: password
+  host: localhost
+  port: 5432
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  reconnect: false
+  database: fuber_test
+  pool: 5
+  username: postgres
+  password: password
+  host: localhost
+  port: 5432
+
